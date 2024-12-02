@@ -1,5 +1,6 @@
 .nContainer {
   justify-content: space-between;
+  background: var(--white);
 }
 
 .mobileMenu {
