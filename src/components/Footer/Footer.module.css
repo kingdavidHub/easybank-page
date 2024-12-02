@@ -5,7 +5,6 @@
   padding: 2rem;
 }
 
-
 .socialLinks {
   gap: 1.5rem;
 }
@@ -25,10 +24,41 @@
   gap: 2rem;
 }
 
-a > img:hover {
+.socialLinks path:hover {
   fill: var(--lime-green);
 }
 
-.links {
-  fill: var(--lime-green);
+
+.fContainer > :nth-child(2) span a:hover,
+.fContainer > :nth-child(3) span a:hover {
+  color: var(--lime-green);
+}
+
+@media (min-width: 1024px) {
+  .fContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .fContainer > :nth-child(1) {
+    margin-bottom: 0;
+    gap: 4rem;
+  }
+
+  .fContainer > :nth-child(4) {
+    gap: 3.5rem;
+  }
+
+  .fContainer > :nth-child(2),
+  .fContainer > :nth-child(3) {
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .fContainer {
+    justify-content: space-evenly;
+  }
 }

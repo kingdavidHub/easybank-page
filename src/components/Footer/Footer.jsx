@@ -1,8 +1,12 @@
 import styles from "./Footer.module.css";
 import classNames from "classnames";
+import { ReactSVG } from "react-svg"
 import EasyBankLogo from "../../assets/logo-white.svg";
-import facebookIcon from "../../assets/icon-facebook.svg";
-
+import FacebookIcon from "../../assets/icon-facebook.svg";
+import TwitterIcon from "../../assets/icon-twitter.svg";
+import PinterestIcon from "../../assets/icon-pinterest.svg";
+import YoutubeIcon from "../../assets/icon-youtube.svg";
+import InstagramIcon from "../../assets/icon-instagram.svg";
 const Footer = () => {
   return (
     <footer className="fWrapper">
@@ -17,31 +21,21 @@ const Footer = () => {
         <div className="flexColCenter">
           <img src={EasyBankLogo} alt="Easy Bank Logo" />
           <div className={classNames("flexCenter", styles.socialLinks)}>
-            <button>
               <a href="#">
-                <img src={facebookIcon} alt="facebook icon" />
+                <ReactSVG  src={FacebookIcon} />
               </a>
-            </button>
-            <button>
               <a href="#">
-                <img src={facebookIcon} alt="facebook icon" className={classNames(styles.links)} />
+                <ReactSVG  src={YoutubeIcon}/>
               </a>
-            </button>
-            <button>
               <a href="#">
-                <img src={facebookIcon} alt="facebook icon" />
+                <ReactSVG src={TwitterIcon} />
               </a>
-            </button>
-            <button>
               <a href="#">
-                <img src={facebookIcon} alt="facebook icon" />
+                <ReactSVG src={PinterestIcon} />
               </a>
-            </button>
-            <button>
               <a href="#">
-                <img src={facebookIcon} alt="facebook icon" />
+                <ReactSVG src={InstagramIcon} />
               </a>
-            </button>
           </div>
         </div>
 
@@ -72,7 +66,7 @@ const Footer = () => {
         </div>
 
         <div className="flexColCenter">
-          <button className="buttons">Request Invite</button>
+          <button type="button" className="buttons">Request Invite</button>
           <span className="secondaryText">&copy; Easybank. All Rights Reserved</span>
         </div>
       </div>
