@@ -1,0 +1,59 @@
+.nContainer {
+  justify-content: space-between;
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background: var(--white);
+}
+
+.mobileMenu.closed {
+  display: none;
+}
+
+.mobileMenu ul {
+  gap: 1rem;
+}
+
+.nIcon button {
+  transition: all 300ms ease-in-out;
+}
+
+.mobileMenu a {
+  color: var(--dark-blue);
+  font-weight: 500;
+}
+
+.desktopMenu {
+  display: none;
+}
+
+
+.nContainer > button {
+  display: none;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .mobileMenu,
+  .nIcon {
+    display: none;
+  }
+
+  .nContainer > button {
+    display: block;
+  }
+
+  .desktopMenu {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .nContainer{
+    justify-content: space-evenly;
+  }
+}
