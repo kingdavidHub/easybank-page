@@ -1,0 +1,62 @@
+.fContainer {
+  background: var(--light-grayish-blue);
+}
+
+.firstSide {
+  text-align: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.firstSide h3 {
+  line-height: 1.5;
+}
+
+.secondSide {
+  gap: 2rem;
+}
+
+.card {
+  gap: 1rem;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .fContainer {
+    align-items: start;
+    padding: 2.5rem;
+  }
+
+  
+  .firstSide {
+    align-items: start;
+  }
+  
+  .firstSide h2 {
+    font-size: 2rem;
+  }
+  
+  .firstSide h3 {
+    width: 580px;
+    text-align: justify;
+  }
+
+
+  .secondSide {
+    flex-direction: row;
+  }
+
+  .secondSide .card {
+    align-items: start;
+    text-align: left;
+  }
+
+  .card {
+    gap: 1.5rem;
+  }
+}
