@@ -2,21 +2,22 @@ import styles from "./Hero.module.css";
 import phoneImg from "../../assets/image-mockups.png";
 import heroMobileImg from "../../assets/bg-intro-mobile.svg";
 import heroDesktopImg from "../../assets/bg-intro-desktop.svg";
+import classNames from "classnames";
 
 const Hero = () => {
   return (
     <section className="hWrapper">
-      <div className={`flexColCenter innerWidth ${styles.hContainer}`}>
+      <div className={classNames("flexColCenter", "innerWidth", styles.hContainer)}>
         {/* Image side */}
-        <div className={`${styles.introContainer}`}>
-          <div className={`${styles.heroOverlay}`} />
+        <div className={classNames(styles.introContainer)}>
+          <div className={classNames(styles.heroOverlay)} />
           {/* <div className={styles.phoneOverlay}>
             <img src={phoneImg} alt="phone"  />
           </div> */}
         </div>
 
         {/* Content side */}
-        <div className={`paddings flexColCenter ${styles.contentSide}`}>
+        <div className={classNames("paddings", "flexColCenter", styles.contentSide)}>
           <h1 className="primaryText">
             Next generation <br />
             digital banking
