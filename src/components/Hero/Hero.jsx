@@ -6,7 +6,7 @@ import classNames from "classnames";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(document.documentElement.clientWidth);
 
   useEffect(() => {
     const currentWidth = () => setWidth(window.innerWidth);
@@ -26,10 +26,11 @@ const Hero = () => {
         <img src={phoneImg} alt="phone" className={styles.phoneOverlay} />
         {/* Image side */}
         <div className={classNames(styles.introContainer)}>
-          <img
-            src={width < 768 ? heroMobileImg : heroDesktopImg}
-            alt="Hero overlay"
-          />
+          {width < 768 ? (
+            <img src={heroMobileImg} alt="Hero overlay" />
+          ) : (
+            <img src={heroDesktopImg} alt="Hero overlay" />
+          )}
         </div>
 
         {/* Content side */}
@@ -50,7 +51,9 @@ const Hero = () => {
             much more.
           </h2>
 
-          <button className="buttons">Request Invite</button>
+          <button type="button" className="buttons">
+            Request Invite
+          </button>
         </div>
       </div>
     </section>

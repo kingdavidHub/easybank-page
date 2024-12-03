@@ -1,6 +1,8 @@
 .hContainer {
   position: relative;
+  background: var(--very-light-gray);
 }
+
 .contentSide {
   gap: 1.5rem;
 }
@@ -31,7 +33,6 @@
   padding-bottom: 5rem;
 }
 
-
 @media (min-width: 1024px), (min-width: 768px) {
   .hContainer .contentSide {
     padding-bottom: 2.5rem;
@@ -40,10 +41,6 @@
   .hContainer {
     flex-direction: row-reverse;
     justify-content: space-between;
-  }
-
-  .hContainer > div {
-    flex: 1;
   }
 
   .introContainer {
@@ -58,7 +55,7 @@
     right: -6rem;
   }
 
-  .introContainer  img {
+  .introContainer img {
     width: unset;
     min-width: 1000px;
     position: absolute;
@@ -68,7 +65,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px), (min-width: 768px) {
   .hContainer {
     overflow-x: clip;
   }
@@ -86,10 +83,14 @@
   .phoneOverlay {
     width: 500px;
   }
+
+  .introContainer img {
+    width: 100px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .hContainer {
+  /* .hContainer {
     overflow-x: clip;
   }
 
@@ -107,6 +108,15 @@
 
   .introContainer img {
     width: 500px;
+  } */
+
+  .hContainer > :nth-child(2) {
+    min-width: 400px;
+  }
+  
+  
+  .hContainer > :nth-child(1) {
+    min-width: 400px;
   }
 }
 

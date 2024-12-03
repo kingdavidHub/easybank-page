@@ -8,14 +8,17 @@ import classNames from "classnames";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const getNavStyles = () => {
-    return document.documentElement.clientWidth < 768 ? { display: "none" } : {};
-  };
-
   return (
     <header>
       <div className={styles.nWrapper}>
-        <div className={classNames("innerWidth", "flexCenter", "paddings", styles.nContainer)}>
+        <div
+          className={classNames(
+            "innerWidth",
+            "flexCenter",
+            "paddings",
+            styles.nContainer
+          )}
+        >
           <img src={EasyBankLogo} alt="EasyBank Logo" />
 
           {/* Desktop styles */}
@@ -23,19 +26,19 @@ const Header = () => {
             <ul>
               <div className={classNames("flexCenter", styles.desktopMenu)}>
                 <li>
-                  <a href="">Home</a>
+                  <a href="#Home">Home</a>
                 </li>
                 <li>
-                  <a href="">About</a>
+                  <a href="#About">About</a>
                 </li>
                 <li>
-                  <a href="">Contact</a>
+                  <a href="#Contact">Contact</a>
                 </li>
                 <li>
-                  <a href="">Blog</a>
+                  <a href="#Blog">Blog</a>
                 </li>
                 <li>
-                  <a href="">Careers</a>
+                  <a href="#Careers">Careers</a>
                 </li>
               </div>
             </ul>
@@ -46,29 +49,28 @@ const Header = () => {
                 [styles.active]: isOpen,
                 [styles.closed]: !isOpen,
               })}
-              style={getNavStyles()}
             >
               <ul className="flexColCenter">
-                <li>
-                  <a href="">Home</a>
+              <li>
+                  <a href="#Home">Home</a>
                 </li>
                 <li>
-                  <a href="">About</a>
+                  <a href="#About">About</a>
                 </li>
                 <li>
-                  <a href="">Contact</a>
+                  <a href="#Contact">Contact</a>
                 </li>
                 <li>
-                  <a href="">Blog</a>
+                  <a href="#Blog">Blog</a>
                 </li>
                 <li>
-                  <a href="">Careers</a>
+                  <a href="#Careers">Careers</a>
                 </li>
               </ul>
             </div>
           </nav>
 
-          <button className="buttons">Request Invite</button>
+          <button type="button" className="buttons">Request Invite</button>
 
           <div className={styles.nIcon}>
             <button onClick={() => setIsOpen((prev) => !prev)}>
