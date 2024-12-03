@@ -3,20 +3,11 @@ import phoneImg from "../../assets/image-mockups.png";
 import heroMobileImg from "../../assets/bg-intro-mobile.svg";
 import heroDesktopImg from "../../assets/bg-intro-desktop.svg";
 import classNames from "classnames";
-import { useEffect, useState } from "react";
+import useWindowSize from "../../hooks/useWindowSize";
+
 
 const Hero = () => {
-  const [width, setWidth] = useState(document.documentElement.clientWidth);
-
-  useEffect(() => {
-    const currentWidth = () => setWidth(window.innerWidth);
-
-    window.addEventListener("resize", currentWidth);
-
-    return () => {
-      window.removeEventListener("resize", currentWidth);
-    };
-  }, []);
+  const { width } = useWindowSize();
 
   return (
     <section className="hWrapper">

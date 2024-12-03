@@ -7,7 +7,7 @@ import ArticleImg4 from "../../assets/image-confetti.jpg";
 
 const Blog = () => {
   return (
-    <section className="bWrapper">
+    <section id="blog" className="bWrapper">
       <div className={classNames("paddings", "innerWidth", styles.bContainer)}>
         <h3 className="primaryText">Latest Articles</h3>
 

@@ -4,12 +4,13 @@ import HamMenu from "../../assets/icon-hamburger.svg";
 import HamClose from "../../assets/icon-close.svg";
 import { useState } from "react";
 import classNames from "classnames";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header>
+    <header id="home">
       <div className={styles.nWrapper}>
         <div
           className={classNames(
@@ -26,19 +27,29 @@ const Header = () => {
             <ul>
               <div className={classNames("flexCenter", styles.desktopMenu)}>
                 <li>
-                  <a href="#Home">Home</a>
+                  <Link to="home" smooth={true} duration={500}>
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <a href="#About">About</a>
+                  <Link to="about" smooth={true} duration={500}>
+                    About
+                  </Link>
                 </li>
                 <li>
-                  <a href="#Contact">Contact</a>
+                  <Link to="contact" smooth={true} duration={500}>
+                    Contact
+                  </Link>
                 </li>
                 <li>
-                  <a href="#Blog">Blog</a>
+                  <Link to="blog" smooth={true} duration={500}>
+                    Blog
+                  </Link>
                 </li>
                 <li>
-                  <a href="#Careers">Careers</a>
+                  <Link to="careers" smooth={true} duration={500}>
+                    Careers
+                  </Link>
                 </li>
               </div>
             </ul>
@@ -51,26 +62,38 @@ const Header = () => {
               })}
             >
               <ul className="flexColCenter">
-              <li>
-                  <a href="#Home">Home</a>
+                <li>
+                  <Link to="home" smooth={true} duration={500}>
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <a href="#About">About</a>
+                  <Link to="about" smooth={true} duration={500}>
+                    About
+                  </Link>
                 </li>
                 <li>
-                  <a href="#Contact">Contact</a>
+                  <Link to="contact" smooth={true} duration={500}>
+                    Contact
+                  </Link>
                 </li>
                 <li>
-                  <a href="#Blog">Blog</a>
+                  <Link to="blog" smooth={true} duration={500}>
+                    Blog
+                  </Link>
                 </li>
                 <li>
-                  <a href="#Careers">Careers</a>
+                  <Link to="careers" smooth={true} duration={500}>
+                    Careers
+                  </Link>
                 </li>
               </ul>
             </div>
           </nav>
 
-          <button type="button" className="buttons">Request Invite</button>
+          <button type="button" className="buttons">
+            Request Invite
+          </button>
 
           <div className={styles.nIcon}>
             <button onClick={() => setIsOpen((prev) => !prev)}>

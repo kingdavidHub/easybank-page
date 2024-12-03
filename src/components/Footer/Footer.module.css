@@ -29,6 +29,11 @@
 }
 
 
+.fContainer a {
+  cursor: pointer;
+}
+
+
 .fContainer > :nth-child(2) span a:hover,
 .fContainer > :nth-child(3) span a:hover {
   color: var(--lime-green);

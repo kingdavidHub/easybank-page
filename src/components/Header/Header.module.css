@@ -78,6 +78,7 @@
     align-items: center;
     height: 80px;
     color: var(--grayish-blue);
+    cursor: pointer;
   }
 
   .desktopMenu a:hover{

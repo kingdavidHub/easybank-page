@@ -1,15 +1,17 @@
 import styles from "./Footer.module.css";
 import classNames from "classnames";
-import { ReactSVG } from "react-svg"
+import { ReactSVG } from "react-svg";
 import EasyBankLogo from "../../assets/logo-white.svg";
 import FacebookIcon from "../../assets/icon-facebook.svg";
 import TwitterIcon from "../../assets/icon-twitter.svg";
 import PinterestIcon from "../../assets/icon-pinterest.svg";
 import YoutubeIcon from "../../assets/icon-youtube.svg";
 import InstagramIcon from "../../assets/icon-instagram.svg";
+import { Link } from "react-scroll";
+
 const Footer = () => {
   return (
-    <footer className="fWrapper">
+    <footer id="contact" className="fWrapper">
       <div
         className={classNames(
           "paddings",
@@ -19,41 +21,51 @@ const Footer = () => {
         )}
       >
         <div className="flexColCenter">
-          <img src={EasyBankLogo} alt="Easy Bank Logo" />
+          <Link to="home" smooth={true} duration={500}>
+            <img src={EasyBankLogo} alt="Easy Bank Logo" />
+          </Link>
           <div className={classNames("flexCenter", styles.socialLinks)}>
-              <a href="#">
-                <ReactSVG  src={FacebookIcon} />
-              </a>
-              <a href="#">
-                <ReactSVG  src={YoutubeIcon}/>
-              </a>
-              <a href="#">
-                <ReactSVG src={TwitterIcon} />
-              </a>
-              <a href="#">
-                <ReactSVG src={PinterestIcon} />
-              </a>
-              <a href="#">
-                <ReactSVG src={InstagramIcon} />
-              </a>
+            <a href="#">
+              <ReactSVG src={FacebookIcon} />
+            </a>
+            <a href="#">
+              <ReactSVG src={YoutubeIcon} />
+            </a>
+            <a href="#">
+              <ReactSVG src={TwitterIcon} />
+            </a>
+            <a href="#">
+              <ReactSVG src={PinterestIcon} />
+            </a>
+            <a href="#">
+              <ReactSVG src={InstagramIcon} />
+            </a>
           </div>
         </div>
 
         <div className="flexColCenter">
           <span>
-            <a href="#">About</a>
+            <Link to="about" smooth={true} duration={500}>
+              About
+            </Link>
           </span>
           <span>
-            <a href="#">Contact</a>
+            <Link to="contact" smooth={true} duration={500}>
+              Contact
+            </Link>
           </span>
           <span>
-            <a href="#">Blog</a>
+            <Link to="blog" smooth={true} duration={500}>
+              Blog
+            </Link>
           </span>
         </div>
 
         <div className="flexColCenter">
           <span>
-            <a href="#">Careers</a>
+            <Link to="careers" smooth={true} duration={500}>
+              Careers
+            </Link>
           </span>
 
           <span>
@@ -66,8 +78,12 @@ const Footer = () => {
         </div>
 
         <div className="flexColCenter">
-          <button type="button" className="buttons">Request Invite</button>
-          <span className="secondaryText">&copy; Easybank. All Rights Reserved</span>
+          <button type="button" className="buttons">
+            Request Invite
+          </button>
+          <span className="secondaryText">
+            &copy; Easybank. All Rights Reserved
+          </span>
         </div>
       </div>
     </footer>
