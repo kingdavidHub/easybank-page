@@ -1,6 +1,8 @@
 .nContainer {
   justify-content: space-between;
   background: var(--white);
+  position: relative;
+  z-index: 10000;
 }
 
 .mobileMenu {

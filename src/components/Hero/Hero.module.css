@@ -1,3 +1,6 @@
+.hContainer {
+  position: relative;
+}
 .contentSide {
   gap: 1.5rem;
 }
@@ -6,7 +9,6 @@
   line-height: 1.5;
 }
 
-
 .introContainer {
   position: relative;
   width: 100%;
@@ -14,22 +16,27 @@
   overflow: hidden;
   z-index: 1;
 }
-
-.heroOverlay {
-  background: url("../../assets/bg-intro-mobile.svg") no-repeat center;
-  background-size: cover;
-  min-height: 300px;
-  min-width: 300px;
+.introContainer img {
   width: 100%;
 }
 
-.heroOverlay {
+.phoneOverlay {
   position: absolute;
-  top: -3rem;
-  z-index: 2;
+  z-index: 5;
+  top: -4rem;
+  width: 450px;
 }
 
+.hContainer .contentSide {
+  padding-bottom: 5rem;
+}
+
+
 @media (min-width: 1024px), (min-width: 768px) {
+  .hContainer .contentSide {
+    padding-bottom: 2.5rem;
+  }
+
   .hContainer {
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -42,12 +49,30 @@
   .introContainer {
     position: relative;
     width: 100%;
-    overflow: hidden;
   }
 
+  .phoneOverlay {
+    position: absolute;
+    z-index: 2;
+    bottom: -10rem;
+    right: -6rem;
+  }
+
+  .introContainer  img {
+    width: unset;
+    min-width: 1000px;
+    position: absolute;
+    top: -7rem;
+    height: 600px;
+    left: -2rem;
+  }
 }
 
 @media (min-width: 1024px) {
+  .hContainer {
+    overflow-x: clip;
+  }
+
   .contentSide {
     margin-left: 4rem;
     align-items: start;
@@ -58,29 +83,36 @@
     min-width: 500px;
   }
 
-  .heroOverlay {
-    background: url("../../assets/bg-intro-desktop.svg") no-repeat center;
-    background-size: cover;
-    min-height: 450px;
-    width: 100%;
-    position: absolute;
-    top: -5rem;
-    right: -8rem;
+  .phoneOverlay {
+    width: 500px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  .hContainer {
+    overflow-x: clip;
+  }
+
   .introContainer {
     min-height: 300px;
   }
 
-  .heroOverlay {
-    background: url("../../assets/bg-intro-desktop.svg") no-repeat center;
-    background-size: cover;
-    height: 300px;
-    width: 100%;
-    position: absolute;
-    top: -3.5rem;
-    right: -5rem;
+
+  .phoneOverlay {
+    min-width: 400px;
+  }
+  .phoneOverlay {
+    top: -7rem;
+  }
+
+  .introContainer img {
+    width: 500px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .phoneOverlay {
+    width: 600px;
+    top: -10rem;
   }
 }
